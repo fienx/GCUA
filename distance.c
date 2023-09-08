@@ -20,7 +20,7 @@ return 0;
 }
 if(distance == 1)printf("Name of (PAUP) file to write distances");
 else printf("Name of (PHYLIP) file to write distances");
-getstr("", lin1);
+getstr("", lin1, sizeof(lin1));
   if((outf = fopen(lin1, "w")) == NULL){
   printf("Cannot open %s for writing\n\n", lin1);
   return 0;

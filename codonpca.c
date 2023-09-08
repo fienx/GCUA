@@ -215,7 +215,7 @@ for(k = 1; k <= n; k++){
      printf("\tPress [Return] to go to main menu\n\n\n\n");
      
      
-        getstr("enter your choice", lin1);
+        getstr("enter your choice", lin1, sizeof(lin1));
 
 		switch(toupper(*lin1)) {
 			case '1': screen = true;
@@ -230,7 +230,7 @@ for(k = 1; k <= n; k++){
 			default : return;
 			}
 if(file){
-       getstr("Name of file to print multivariate analysis ", lin1);
+       getstr("Name of file to print multivariate analysis ", lin1, sizeof(lin1));
 	   if((pcaout = fopen(lin1, "w")) == NULL){  /*Check to see if it can be opened for writing*/
 	   printf("\n\nCannot open %s\n\n", lin1);
 	   return;

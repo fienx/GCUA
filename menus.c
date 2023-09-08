@@ -28,7 +28,7 @@ printf("%s %s %s %s %s %s %s %s %s",
            "\tH.          (H)elp                           \n\n",
            "\tQ.          (Q)uit program                   \n\n\n");
         
-        getstr("enter your choice", lin1);
+        getstr("enter your choice", lin1, sizeof(lin1));
 
 		switch(toupper(*lin1)) {
 			case '1': fasta_in();
@@ -75,7 +75,7 @@ printf("%s %s %s %s %s %s %s %s %s %s",
            "\tQ.      Exit from program\n\n\n",
            "\tPress [Return] to exit this menu\n\n");
         
-        getstr("enter your choice", lin1);
+        getstr("enter your choice", lin1, sizeof(lin1));
 
       		switch(toupper(*lin1)) {
 			case '1': *scr = TRUE;
@@ -144,7 +144,7 @@ printf("%s %s %s %s %s %s %s %s %s",
            "\tQ.      Exit from program\n\n\n",
            "\tHit [RETURN] to exit this menu\n\n");
         
-        getstr("enter your choice", lin1);
+        getstr("enter your choice", lin1, sizeof(lin1));
 
       		switch(toupper(*lin1)) {
 			case '1': *scr = TRUE;
@@ -207,7 +207,7 @@ printf("%s %s %s %s %s %s %s %s %s",
            "\tQ.      Exit from program\n\n\n",
            "\tHit [RETURN] to exit this menu\n\n");
         
-        getstr("enter your choice", lin1);
+        getstr("enter your choice", lin1, sizeof(lin1));
 
       		switch(toupper(*lin1)) {
 			case '1': *scr = TRUE;
@@ -263,7 +263,7 @@ printf("\n\n\n\n%s %s %s",
        "2.            Analyse Amino Acid frequencies\n\n\n\n",
        "Press [Return] to go to main menu\n\n\n");
        
-       getstr("enter your choice", lin1);
+       getstr("enter your choice", lin1, sizeof(lin1));
 		switch(toupper(*lin1)) {
 			case '1': *DNA = true;
 			          *m = 59;
@@ -286,7 +286,7 @@ printf("\n\n\n\n%s %s %s %s %s",
        "4.            Correspondence Analysis [Default]\n\n\n\n",
        "Press [Return] to go to main menu\n\n\n");
        
-      getstr("enter your choice", lin1);
+      getstr("enter your choice", lin1, sizeof(lin1));
 		switch(toupper(*lin1)) {
 			case '1': *option = 'r';
 			              break;
@@ -310,7 +310,7 @@ printf("\n\n\n\n%s %s %s",
        "2.         Running preferences \n\n\n",
        "Press [Return] to go back to main menu\n\n\n");
        
-      getstr("enter your choice", lin1);
+      getstr("enter your choice", lin1, sizeof(lin1));
 		switch(toupper(*lin1)) {
 		    case '1': gencodemenu();
 		                break;
@@ -333,7 +333,7 @@ printf("2.          Mycoplasma/Spiroplasma code");
 if(code == 7) printf("   ON\n\n\n");
 else printf("   OFF\n\n\n");
 printf("Press [Return] to go back to main menu\n\n\n");
-       getstr("enter your choice", lin1);
+       getstr("enter your choice", lin1, sizeof(lin1));
 		switch(toupper(*lin1)) {
               case '1' : code = 1;
                          continue;
@@ -367,7 +367,7 @@ printf("5.          Toggle Distance file format");
                                    else printf("      PHYLIP\n\n\n\n");
 printf("Press [Return] to go back to main menu\n\n\n");
 
-       getstr("enter your choice", lin1);
+       getstr("enter your choice", lin1, sizeof(lin1));
 		switch(toupper(*lin1)) {
               case '1' : calcs = 3;
                            continue;

@@ -24,10 +24,10 @@ _ftype = 'TEXT';
 		        }
      if(file == true && i == 0){
       if(cumul == FALSE){
-          getstr("\n\nName of file to write Amino acid Usage for each gene?", outfilnam);
+          getstr("\n\nName of file to write Amino acid Usage for each gene?", outfilnam, sizeof(outfilnam));
           }
       else
-          getstr("\n\nName of file to write cumulative Amino acid Usage?", outfilnam);
+          getstr("\n\nName of file to write cumulative Amino acid Usage?", outfilnam, sizeof(outfilnam));
 	          if((outf = fopen (outfilnam,"w")) == NULL){                  /*Check to see if it can be opened for writing*/
 	            printf("\n\nCannot open the file %s\n\n", outfilnam);
 	             return 0;
@@ -91,7 +91,7 @@ _ftype = 'TEXT';
                  basechoicemenu ( &screen, &file, &cumul, &choice, &allall ); /*Ask about the kind of output*/
 		        }
       if(file && i == 0){
-          getstr("\n\nName of file to write base composition data for each gene?", outfilnam);
+          getstr("\n\nName of file to write base composition data for each gene?", outfilnam, sizeof(outfilnam));
 	          if((outf = fopen (outfilnam,"w")) == NULL){                     /*Check to see if it can be opened for writing*/
 	            printf("\n\nCannot open the file %s\n\n", outfilnam);
 	             return;

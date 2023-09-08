@@ -29,7 +29,7 @@ for(i = 0; i < nbseq; i++){
                  choicemenu ( &screen, &file, &cumul, &choice, &allall, &ade ); /*Ask about the kind of output*/
 		        }
       if(file && i == 0){
-                getstr("\n\nName of file to write Codon Usage for each gene?", outfilnam);
+                getstr("\n\nName of file to write Codon Usage for each gene?", outfilnam, sizeof(outfilnam));
 	               if((outf = fopen (outfilnam,"w")) == NULL){  /*Check to see if it can be opened for writing*/
 	                printf("\n\nCannot open the file %s\n\n", outfilnam);
 	               return;

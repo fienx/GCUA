@@ -16,7 +16,7 @@ int i = 0,
     i1 = 0,
     i2 = 0;
 
-          getstr("\n\n\tName of the Fasta-formatted file", filnam);
+          getstr("\n\n\tName of the Fasta-formatted file", filnam, sizeof(filnam));
 	if((fp = fopen (filnam,"r")) == NULL){            /*Check to see if it is there*/
 	  printf("\n\n\tCannot open the file %s\n\n", filnam);
 	  return;
