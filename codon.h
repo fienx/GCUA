@@ -34,7 +34,7 @@
 #endif
 /********************************prototypes*****/
 
-void getstr              ( char *instr, char *outstr );
+void getstr              ( char *instr, char *outstr, int size );
 void prog_exit           ( void   );
 void main_menu           ( void   );
 void fasta_in            ( void   );
